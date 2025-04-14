@@ -7,9 +7,16 @@ const outputDiv = document.getElementById("output"); // keep this to output to p
 // 4. display the results to the page.
 
 let gameSettings = {
-  diff: 0,
+  difficulty: 0,
   soundOn: false,
   maxPlayers: 100,
+  toggleSound: function(){
+    if(this.soundOn == true){
+      this.soundOn = false;
+    }else if (this.soundOn == false){
+      this.soundOn = true;
+    }
+  }
 }
 
 function problem1() {
@@ -26,7 +33,7 @@ function problem1() {
 // 4. Each time you click the button, it should alternate between true and false.
 
 function problem2() {
-  // Add ONE line IN THIS function that calls toggleSound method.
+  gameSettings.toggleSound();
   outputDiv.innerHTML = `<strong>Sound is now:</strong> ${gameSettings.soundOn}`;
 }
 
