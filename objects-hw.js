@@ -121,25 +121,32 @@ function problem5() {
 // 1. Create an object called playlist that
 // 2. has a name and a songList (array). 
 // 3. Add a method addSong that adds a new song to the list. 
-// 4. This should take user input (prompt) to add the song to songList. 
+// 4. This should take user input (prompt) to add Sthe song to songList. 
 // 5. Then add two songs and log the playlist.
+
+let playlist = {
+  songList: ["The Mind Electric","ABSOLUTE","memento mori: the most importing thing", "Hand me my shovel i'm going in"],
+  addSong: function(song){
+    this.songList.push(song);
+  }
+}
+
+
 
 function problem6() {
   // Use a for loop that iterates 2 times to ask for two songs.
   // No need to touch the for loop except uncommenting and replacing the PLACEHOLDER.
-  // for (PLACEHOLDER) {
-  //   const song = prompt(`Enter song ${i + 1}:`);
-  //   if (song && song.trim() !== "") {
-  //     playlist.addSong(song.trim());
-  //   }
-  // }
-
-
+  for (i = 0; i < 2; i++){
+     const song = prompt(`Enter song ${i + 1}:`);
+     if (song && song.trim() !== "") {
+       playlist.addSong(song.trim());
+     }
+  }
   // This will output to the page for you:
   // Just fill in the PLACEHOLDERs with the correct info.
-  let result = `<strong>Playlist: PLACEHOLDER </strong><ul>`;
-  for (let song of PLACEHOLDER) {
-    result += `<li>${PLACEHOLDER}</li>`;
+  let result = `<strong>Playlist:  </strong><ul>`;
+  for (let song of playlist.songList) {
+    result += `<li>${song}</li>`;
   }
   result += "</ul>";
   outputDiv.innerHTML = result;
