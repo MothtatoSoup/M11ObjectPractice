@@ -21,8 +21,10 @@ let gameSettings = {
 
 function problem1() {
   // Output results in a new result variable. use let result = ______
+  let result = "<strong>Game Settings: </strong><br>"
   for (key in gameSettings){
-    outputDiv.innerHTML = gameSettings[key]; // keep this to output to page.
+    result += `${key}: ${gameSettings[key]}`
+    outputDiv.innerHTML = result; // keep this to output to page.
   }
 }
 
