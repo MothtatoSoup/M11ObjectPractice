@@ -90,7 +90,13 @@ function problem4() {
 // 5. PUSHes a new plant into the array. 
 // 6. Use the method to add two plants, then 
 // 7. loop through the object to display (list out on the page) the plants in the garden.
-
+let garden = {
+  plants: ["corpse flower","bleeding heart", "dragon's blood tree"],
+  addPlant: function(){
+    let newplant = document.getElementById("plantInput").value;
+    this.plants.push(newplant)
+  }
+}
 
 function problem5() {
   
