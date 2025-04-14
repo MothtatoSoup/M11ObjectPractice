@@ -6,9 +6,17 @@ const outputDiv = document.getElementById("output"); // keep this to output to p
 // 3. Loop through the object and 
 // 4. display the results to the page.
 
+let gameSettings = {
+  diff: 0,
+  soundOn: false,
+  maxPlayers: 100,
+}
+
 function problem1() {
   // Output results in a new result variable. use let result = ______
-  outputDiv.innerHTML = result; // keep this to output to page.
+  for (key in gameSettings){
+    outputDiv.innerHTML = gameSettings[key]; // keep this to output to page.
+  }
 }
 
 // Problem 2
