@@ -68,9 +68,14 @@ function problem3() {
 // 5. displays a formatted string to the page like:
 // 6. "Name: [name], Battery Life: [batteryLife] hrs, Wireless: [true/false]".
 
+let Gadget = {
+  name: "Bob",
+  batteryLife: "100,000,000,000,000 yrs",
+  isWireless: true
+}
 
 function printGadgetSpecs(gadget) {
-  return // insert `output string here` // hint: use backticks and ${object.property} references.
+  return `${gadget.name} has a battery life of ${gadget.batteryLife} - Is it wirless? ${gadget.isWireless}`// insert `output string here` // hint: use backticks and ${object.property} references.
 }
 
 function problem4() {
