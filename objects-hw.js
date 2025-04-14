@@ -42,15 +42,22 @@ function problem2() {
 // 2. with the properties flavor, size, and hasProtein (boolean). 
 // 3. Prompt the user for a size, then 
 // 4. display the updated size on the page.
-  
-  function problem3() {
-    // keep this if else block to help with overwriting the old size. 
-    // You will need to have created a newSize variable with the use of a prompt.
-    if (newSize && newSize.trim() !== "") {
-      smoothie.size = newSize.trim();
-    }
-    outputDiv.innerHTML = `<strong>Smoothie Size Updated:</strong> ${smoothie.size}`;
+
+let smoothie = {
+  flavor: "Pizza",
+  size: "Medium",
+  hasProtein: true,
+}
+
+function problem3() {
+  // keep this if else block to help with overwriting the old size. 
+  // You will need to have created a newSize variable with the use of a prompt.
+  let newSize = window.prompt("What size smoothie do you want? Small, Medium, Large, X-Large, XX-Large, XXX-Large")
+  if (newSize && newSize.trim() !== "") {
+    smoothie.size = newSize.trim();
   }
+  outputDiv.innerHTML = `<strong>Smoothie Size Updated:</strong> ${smoothie.size}`;
+}
   
 
 // Problem 4
